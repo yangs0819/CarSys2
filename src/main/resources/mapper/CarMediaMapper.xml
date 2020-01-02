@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.feri.car.car.dao.CarMediaMapper">
+  <resultMap id="BaseResultMap" type="com.feri.car.car.entity.CarMedia">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="oid" jdbcType="INTEGER" property="oid" />
+    <result column="cid" jdbcType="INTEGER" property="cid" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="flag" jdbcType="INTEGER" property="flag" />
+    <result column="msort" jdbcType="INTEGER" property="msort" />
+    <result column="ctime" jdbcType="TIMESTAMP" property="ctime" />
+  </resultMap>
+
+  <insert id="insert" parameterType="com.feri.car.car.entity.CarMedia">
+    insert into car_media (oid, cid,
+      type, flag, msort, 
+      ctime)
+    values (#{oid,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER},
+      #{type,jdbcType=INTEGER}, #{flag,jdbcType=INTEGER}, #{msort,jdbcType=INTEGER}, 
+      #{ctime,jdbcType=TIMESTAMP})
+  </insert>
+
+</mapper>

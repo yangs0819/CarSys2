@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="q">
+        <span v-if="seen"> Now you see me</span>
+    </div>
+
+<script >
+    var app3 = new Vue({
+        el:"#q",
+        data:{
+            seen: false
+        }
+    })
+</script>
+</body>
+</html>

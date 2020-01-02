@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="q">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+
+
+<script >
+    var app4 = new Vue({
+        el:"#q",
+        data:{
+            todos:[
+                {text:"hasdad"},
+                {text:"sdfsf"},
+                {text:"xvxcv"},
+            ]
+        }
+    })
+</script>
+</body>
+</html>

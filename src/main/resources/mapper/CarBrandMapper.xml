@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.feri.car.car.dao.CarBrandMapper">
+  <resultMap id="BaseResultMap" type="com.feri.car.car.entity.CarBrand">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="english_name" jdbcType="VARCHAR" property="englishName" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="logo_url" jdbcType="VARCHAR" property="logoUrl" />
+    <result column="first_char" jdbcType="VARCHAR" property="firstChar" />
+    <result column="introduction" jdbcType="VARCHAR" property="introduction" />
+    <result column="sale_status" jdbcType="TINYINT" property="saleStatus" />
+    <result column="create_time" jdbcType="INTEGER" property="createTime" />
+    <result column="update_time" jdbcType="INTEGER" property="updateTime" />
+    <result column="do_time" jdbcType="INTEGER" property="doTime" />
+    <result column="sync_time" jdbcType="INTEGER" property="syncTime" />
+  </resultMap>
+
+  <insert id="insert" parameterType="com.feri.car.car.entity.CarBrand">
+    insert into car_brand (name, english_name,
+      country, logo_url, first_char, 
+      introduction, sale_status, create_time, 
+      update_time, do_time, sync_time
+      )
+    values (#{name,jdbcType=VARCHAR}, #{englishName,jdbcType=VARCHAR},
+      #{country,jdbcType=VARCHAR}, #{logoUrl,jdbcType=VARCHAR}, #{firstChar,jdbcType=VARCHAR}, 
+      #{introduction,jdbcType=VARCHAR}, #{saleStatus,jdbcType=TINYINT}, #{createTime,jdbcType=INTEGER}, 
+      #{updateTime,jdbcType=INTEGER}, #{doTime,jdbcType=INTEGER}, #{syncTime,jdbcType=INTEGER}
+      )
+  </insert>
+
+</mapper>

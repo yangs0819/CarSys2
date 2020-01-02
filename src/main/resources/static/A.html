@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div>
+    <p>请输入要加载的地址：<span id="currenttime"></span></p>
+    <p>
+        <input type="text" id="url" value="https://www.baidu.com/">
+        <input type="button" value="提交" onclick="haha()">
+    </p>
+</div>
+<div>
+    <iframe width="100%" height="100%" id="if" src="">
+        
+    </iframe>
+</div>
+
+<script >
+
+    window.onload = function f() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var moon = date.getMonth();
+        var day = date.getDay();
+        var showTime = year+"-"+moon+"-"+day;
+        document.getElementById("currenttime").innerText = showTime;
+    }
+
+
+
+    function haha() {
+        var url = document.getElementById("url").value;
+
+        document.getElementById("if").src = url;
+    }
+    
+</script>
+
+
+</body>
+</html>

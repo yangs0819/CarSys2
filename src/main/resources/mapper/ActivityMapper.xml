@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.feri.car.activity.dao.ActivityMapper">
+  <resultMap id="BaseResultMap" type="com.feri.car.activity.entity.Activity">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="state" jdbcType="TINYINT" property="state" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="link" jdbcType="VARCHAR" property="link" />
+    <result column="begin_time" jdbcType="INTEGER" property="beginTime" />
+    <result column="end_time" jdbcType="INTEGER" property="endTime" />
+    <result column="channel_top" jdbcType="TINYINT" property="channelTop" />
+    <result column="home_top" jdbcType="TINYINT" property="homeTop" />
+    <result column="pv_count" jdbcType="INTEGER" property="pvCount" />
+    <result column="uv_count" jdbcType="INTEGER" property="uvCount" />
+    <result column="publish_state" jdbcType="TINYINT" property="publishState" />
+    <result column="create_uid" jdbcType="INTEGER" property="createUid" />
+    <result column="create_time" jdbcType="INTEGER" property="createTime" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="unpublish_uname" jdbcType="VARCHAR" property="unpublishUname" />
+    <result column="unpublish_time" jdbcType="VARCHAR" property="unpublishTime" />
+    <result column="seo_keywords" jdbcType="VARCHAR" property="seoKeywords" />
+    <result column="sdk_path" jdbcType="VARCHAR" property="sdkPath" />
+    <result column="like_count" jdbcType="INTEGER" property="likeCount" />
+    <result column="share_count" jdbcType="INTEGER" property="shareCount" />
+    <result column="view_count" jdbcType="INTEGER" property="viewCount" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+    <result column="cover_pic" jdbcType="VARCHAR" property="coverPic" />
+    <result column="cars" jdbcType="VARCHAR" property="cars" />
+    <result column="sdk_id" jdbcType="INTEGER" property="sdkId" />
+    <result column="sdk_title" jdbcType="VARCHAR" property="sdkTitle" />
+    <result column="dealer" jdbcType="VARCHAR" property="dealer" />
+  </resultMap>
+
+  <insert id="insert" parameterType="com.feri.car.activity.entity.Activity">
+    insert into activity (title, category_id,
+      url, state, summary, 
+      link, begin_time, end_time, 
+      channel_top, home_top, pv_count, 
+      uv_count, publish_state, create_uid, 
+      create_time, author, unpublish_uname, 
+      unpublish_time, seo_keywords, sdk_path, 
+      like_count, share_count, view_count, 
+      tags, cover_pic, cars, 
+      sdk_id, sdk_title, dealer, 
+      description, seo_description)
+    values (#{title,jdbcType=VARCHAR}, #{categoryId,jdbcType=INTEGER},
+      #{url,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, #{summary,jdbcType=VARCHAR}, 
+      #{link,jdbcType=VARCHAR}, #{beginTime,jdbcType=INTEGER}, #{endTime,jdbcType=INTEGER}, 
+      #{channelTop,jdbcType=TINYINT}, #{homeTop,jdbcType=TINYINT}, #{pvCount,jdbcType=INTEGER}, 
+      #{uvCount,jdbcType=INTEGER}, #{publishState,jdbcType=TINYINT}, #{createUid,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=INTEGER}, #{author,jdbcType=VARCHAR}, #{unpublishUname,jdbcType=VARCHAR}, 
+      #{unpublishTime,jdbcType=VARCHAR}, #{seoKeywords,jdbcType=VARCHAR}, #{sdkPath,jdbcType=VARCHAR}, 
+      #{likeCount,jdbcType=INTEGER}, #{shareCount,jdbcType=INTEGER}, #{viewCount,jdbcType=INTEGER}, 
+      #{tags,jdbcType=VARCHAR}, #{coverPic,jdbcType=VARCHAR}, #{cars,jdbcType=VARCHAR}, 
+      #{sdkId,jdbcType=INTEGER}, #{sdkTitle,jdbcType=VARCHAR}, #{dealer,jdbcType=VARCHAR}, 
+      #{description,jdbcType=LONGVARCHAR}, #{seoDescription,jdbcType=LONGVARCHAR})
+  </insert>
+
+</mapper>
